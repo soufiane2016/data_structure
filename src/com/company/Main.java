@@ -12,6 +12,7 @@ public class Main {
 	    numbers.insert(20);
 		//numbers.RemoveAt(5);
 		//System.out.print(numbers.IndexOf(40));
+	    //TODO 
 
 		System.out.print(numbers.Max());
 
