@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class Array {
     private int[] itemes;
     private int count;
@@ -22,7 +24,7 @@ public class Array {
         itemes[count++] = item;
     }
 
-    public void RemoveAt(int index){
+    public void removeAt(int index){
         if(index < 1 || index >= count){
             throw new IllegalArgumentException();
         }
@@ -32,7 +34,7 @@ public class Array {
         count--;
     }
 
-    public int IndexOf(int item){
+    public int indexOf(int item){
         /*for (int i = 0; i<count; i++){
             if(itemes[i] == item){
                 System.out.print(i + " ");
@@ -46,7 +48,7 @@ public class Array {
         return -1;
     }
 
-    public int Max(){
+    public int max(){
         largest = itemes[0];
         for(int i = 0; i<count; i++){
             if(largest < itemes[i+1]){
@@ -56,6 +58,39 @@ public class Array {
         return largest;
     }
 
+    public void intersect(ArrayList<Integer> newItem) {
+    	for(int i = 0 ; i<itemes.length; i++) {
+    		for(int j = 0; j<newItem.size(); j++) {
+    			if(newItem.get(j) == itemes[i])
+    				System.out.println(itemes[i]);
+    		}
+    	}
+    	
+    }
+    
+    public void reverse() {
+    	int[] reversed = new int[itemes.length];
+    	int j = 0;
+    	for(int i = count; i>=0; i--) {
+    		reversed[j++] = itemes[i];
+    	}
+    	
+    	for(int i = 0; i<=count; i++) {
+    		System.out.print(reversed[i]);
+    	}
+    	
+    }
+    
+    /*public void insertAt(int item, int index) {
+    	for(int i = 0; i<itemes.length; i++) {
+    		if() {
+    			
+    		}
+    	}
+    	itemes[index]=item;
+    	
+    }*/
+    
     public void print(){
         for(int i = 0; i<count; i++){
             System.out.println(itemes[i]);
