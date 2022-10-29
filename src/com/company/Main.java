@@ -1,11 +1,10 @@
 package com.company;
 
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
-	    Array numbers = new Array(3);
+////////////////// Array list examples /////////////
+	    /*Array numbers = new Array(3);
 	    int[] newNumbers = new int[4];
 	    ArrayList<Integer> newNumber = new ArrayList<Integer>();
 	    numbers.insert(10);
@@ -24,8 +23,22 @@ public class Main {
 
 		//System.out.print(numbers.max());
 		//numbers.intersect(newNumber);
-	    numbers.reverse();
+	    //numbers.reverse();
+	    numbers.insertAt(315,1);
 	    //System.out.print(newNumber);
-	    //numbers.print();
+	    //numbers.print();*/
+
+/////////////// LinkedList examples //////////////
+    	
+    	var linkedList = new LinkedList();
+    	
+    	linkedList.addLast(10);
+    	linkedList.addLast(20);
+    	linkedList.addLast(30);
+    	
+    	System.out.print(linkedList.indexOf(20));
+    	
+    	
+
     }
 }

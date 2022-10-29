@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Array {
     private int[] itemes;
@@ -81,15 +82,34 @@ public class Array {
     	
     }
     
-    /*public void insertAt(int item, int index) {
-    	for(int i = 0; i<itemes.length; i++) {
-    		if() {
-    			
-    		}
-    	}
-    	itemes[index]=item;
+    public void insertAt(int item, int index) {
+    	if(index < 1 || index >= count){
+            throw new IllegalArgumentException();
+        }
+        /*for(int i = index ; i<count; i++){
+            itemes[i] = itemes[i+1];
+        }
+        
+        count++;*/
+    	int[] newArray = new int[count];
+    	int j = 0;
     	
-    }*/
+    	for(int i = index ; i<count; i++){
+    		newArray[j++] = itemes[i];
+        }
+    	
+    	for(int i = 0 ; i<=index; i++) {
+    		itemes[i+1]=item;  		
+    	}
+    	 for(int l = 0 ; l<=count+1;l++) {
+    		 itemes[index]=newArray[l];
+    		 System.out.print(itemes[l]);
+    	 }
+    	
+      
+    	//itemes[index]=item;
+    	
+    }
     
     public void print(){
         for(int i = 0; i<count; i++){
